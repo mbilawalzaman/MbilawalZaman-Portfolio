@@ -24,9 +24,9 @@ function BlogDetails(props) {
       .catch((err) => console.log(err));
   });
 
-  const disqusShortname = "chester-react"; //found in your Disqus.com dashboard
+  const disqusShortname = "Bilawal-react"; //found in your Disqus.com dashboard
   const disqusConfig = {
-    url: "https://tf-react-chester.now.sh/", //Homepage link of this site.
+    url: "https://tf-react-Bilawal.now.sh/", //Homepage link of this site.
     identifier: blogId,
     title: blogFile,
   };
@@ -34,10 +34,10 @@ function BlogDetails(props) {
   return (
     <Layout>
       <Helmet>
-        <title>Blog Details - Chester React Personal Portfolio Template</title>
+        <title>Blog Details - Bilawal React Personal Portfolio Template</title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template Blog Details Page"
+          content="Bilawal React Personal Portfolio Template Blog Details Page"
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>
