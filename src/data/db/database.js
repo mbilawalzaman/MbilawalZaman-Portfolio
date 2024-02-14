@@ -101,7 +101,7 @@ const database = {
       subtitle: "",
       imageUrl: "/images/portfolio-image-1.jpg",
       largeImageUrl: ["/images/portfolio-image-1-lg.jpg"],
-      url: 'https://dribbble.com'
+      url: 'https://github.com/mbilawalzaman/pms-project'
     },
     {
       id: 2,
