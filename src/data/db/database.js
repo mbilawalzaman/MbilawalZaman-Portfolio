@@ -116,7 +116,7 @@ const database = {
       subtitle: "Beautiful mug with logo.",
       imageUrl: "/images/portfolio-image-2.jpg",
       largeImageUrl: ["/images/portfolio-image-2-lg.jpg"],
-      url: "https://github.com/mbilawalzaman/CODSOFT-calculator",
+      url: "https://codsoft-calculator316.netlify.app/",
     },
     {
       id: 4,
@@ -128,10 +128,12 @@ const database = {
     },
     {
       id: 5,
-      title: "Mug",
-      subtitle: "Mug with awesome style",
-      imageUrl: "/images/portfolio-image-5.jpg",
-      largeImageUrl: ["/images/portfolio-image-5-lg.jpg"],
+      title: "Zakaat calculator",
+      subtitle: "Zakaat Calculator with awesome style",
+      imageUrl: "/images/ZakaatCalculator.jpg",
+      largeImageUrl: ["/images/ZakaatCalculator.jpg"],
+      url: "https://zakaatcalculator.netlify.app/",
+
     },
   ],
   experience: {
