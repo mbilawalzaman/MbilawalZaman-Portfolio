@@ -1,0 +1,8 @@
+[build]
+  command = "yarn run build"   # Command to build your project
+  publish = "build"             # Directory to publish after build
+
+[[redirects]]
+  from = "/*"                   # Catch-all for client-side routing
+  to = "/index.html"            # Redirect all routes to index.html
+  status = 200
