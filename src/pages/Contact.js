@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 import Sectiontitle from "../components/Sectiontitle";
 import Spinner from "../components/Spinner";
+import emailjs from "emailjs-com";
 
 function Contact() {
   const [phoneNumbers, setPhoneNumbers] = useState([]);
@@ -19,31 +20,74 @@ function Contact() {
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
 
+  const displayMessage = (msg, isError = false) => {
+    setMessage(msg);
+    setError(isError);
+    setTimeout(() => {
+      setMessage("");
+      setError(false);
+    }, 3000);
+  };
+
   const submitHandler = (event) => {
     event.preventDefault();
+
+    // Input validation
     if (!formdata.name) {
-      setError(true);
-      setMessage("Name is required");
+      displayMessage("Name is required", true);
     } else if (!formdata.email) {
-      setError(true);
-      setMessage("Email is required");
+      displayMessage("Email is required", true);
     } else if (!formdata.subject) {
-      setError(true);
-      setMessage("Subject is required");
+      displayMessage("Subject is required", true);
     } else if (!formdata.message) {
-      setError(true);
-      setMessage("Message is required");
+      displayMessage("Message is required", true);
     } else {
       setError(false);
-      setMessage("You message has been sent!!!");
+
+      // Sending email through EmailJS
+      emailjs
+        .send(
+          "service_nci8v0a", // Your Service ID
+          "template_jemoh47", // Your Template ID
+          {
+            from_name: formdata.name,
+            from_email: formdata.email,
+            subject: formdata.subject,
+            message: formdata.message,
+          },
+          "GJnMUMwQOPljl-3vT", // Your Private Key / User ID
+        )
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            displayMessage("Your message has been sent!");
+
+            // Clear the form
+            setFormdata({
+              name: "",
+              email: "",
+              subject: "",
+              message: "",
+            });
+          },
+          (error) => {
+            console.log("FAILED...", error);
+            displayMessage(
+              "Failed to send message, please try again later.",
+              true,
+            );
+          },
+        );
     }
   };
+
   const handleChange = (event) => {
     setFormdata({
       ...formdata,
       [event.currentTarget.name]: event.currentTarget.value,
     });
   };
+
   const numberFormatter = (number) => {
     const phnNumber = number;
     return phnNumber;
@@ -87,8 +131,7 @@ function Contact() {
                   <form
                     action="#"
                     className="mi-form mi-contact-form"
-                    onSubmit={submitHandler}
-                  >
+                    onSubmit={submitHandler}>
                     <div className="mi-form-field">
                       <label htmlFor="contact-form-name">
                         Enter your name*
@@ -135,8 +178,7 @@ function Contact() {
                         id="contact-form-message"
                         cols="30"
                         rows="6"
-                        value={formdata.message}
-                      ></textarea>
+                        value={formdata.message}></textarea>
                     </div>
                     <div className="mi-form-field">
                       <button className="mi-button" type="submit">
