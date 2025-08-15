@@ -140,40 +140,20 @@ const database = {
     workingExperience: [
       {
         id: 1,
-        year: "Jul 2024 - PRESENT",
-        position: "Associate Software Engineer",
+        year: "Jul 2024 - AUG 2025",
+        position: "Full Stack Developer",
         company: "SandyApps",
         details: `
-          As an Associate Software Engineer at SandyApps, I have gained valuable experience in developing full-stack web applications. 
+          As a Full Stack Developer at SandyApps, I have gained valuable experience in developing full-stack web applications. 
           I have actively contributed to projects such as the SandyApps Attendance app and BlockAPT, where I refined my skills in MongoDB, MySQL, Express.js, React.js, PHP, Laravel, AngularJS, and Node.js. 
           Working collaboratively with a skilled team, I have played a key role in implementing robust and scalable solutions.`,
       },
       {
         id: 2,
-        year: "APR 2024 - JUN 2024",
-        position: "Software Engineer Trainee",
-        company: "SandyApps",
-        details: `
-          As a Software Engineer Trainee at SandyApps, I gained hands-on experience in developing full-stack web applications.
-          I was involved in various projects i.e SandyApps Attendance, where I honed my skills in MongoDB, Express.js, React.js and Node.js.
-          Collaborating with a talented team, I contributed to the implementation of robust and scalable solutions.`,
-      },
-      {
-        id: 3,
-        year: "NOV 2023 - JAN 2024",
-        position: "MERN Stack Trainee",
-        company: "Knowledge Streams",
-        details: `
-          "As a MERN Stack Trainee at Knowledge Streams, I gained hands-on experience in developing full-stack web applications.
-          I was involved in various projects where I honed my skills in MongoDB,Postgres SQL, Express.js, React.js, and Node.js.
-          Collaborating with a talented team, I contributed to the implementation of robust and scalable solutions.`,
-      },
-      {
-        id: 4,
-        year: "AUG 2023 - OCT 2023",
-        position: "Frontend Web Developer - Internee",
+        year: "MAY 2023 - MAR 2024",
+        position: "Frontend Web Developer",
         company: "Axis Cyber Technologies",
-        details: `As a Frontend Web Developer intern at Axis Cyber Technologies, I focused on creating engaging and responsive user interfaces.
+        details: `As a Frontend Web Developer at Axis Cyber Technologies, I focused on creating engaging and responsive user interfaces.
           I worked with modern frontend technologies such as HTML, CSS, and JavaScript, ensuring seamless user experiences across various platforms.
           Collaborating with senior developers, I participated in the development and enhancement of client-side features.`,
       },
@@ -181,6 +161,14 @@ const database = {
     educationExperience: [
       {
         id: 1,
+        year: "2023",
+        certification: "MERN Stack - Training",
+        institute: "Knowledge Stream - Lahore",
+        details:
+          "Completed my Certification in MERN Stack from Knowledge Stream - Lahore. Acquired a strong foundation in MERN Stack development principles and gained practical skills in software development.",
+      },
+      {
+        id: 2,
         year: "2010 - 2014",
         graduation: "Bachelor of Computer Science",
         university: "Virtual University of Pakistan",
@@ -188,7 +176,7 @@ const database = {
           "Completed my Bachelor's degree in Computer Science from the Virtual University of Pakistan. Acquired a strong foundation in computer science principles and gained practical skills in software development.",
       },
       {
-        id: 2,
+        id: 3,
         year: "2006 - 2008",
         graduation: "Intermidiate of Computer Science",
         university: "Wise College",
@@ -196,9 +184,9 @@ const database = {
           "Studied Computer Science at Wise College for my intermediate education. Developed a solid understanding of fundamental programming concepts and problem-solving skills.",
       },
       {
-        id: 3,
+        id: 4,
         year: "2017",
-        graduation: "Matricuation",
+        graduation: "Matriculation",
         university: "Defence Public School",
         details:
           "Completed my Matriculation at Defence Public School. Established a strong academic foundation and developed a keen interest in computer science.",
