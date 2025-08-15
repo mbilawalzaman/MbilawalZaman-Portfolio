@@ -162,8 +162,8 @@ const database = {
       {
         id: 1,
         year: "2023",
-        certification: "MERN Stack - Training",
-        institute: "Knowledge Stream - Lahore",
+        graduation: "MERN Stack - Training",
+        university: "Knowledge Stream - Lahore",
         details:
           "Completed my Certification in MERN Stack from Knowledge Stream - Lahore. Acquired a strong foundation in MERN Stack development principles and gained practical skills in software development.",
       },
